@@ -16,17 +16,14 @@ def parse_args():
     parser.add_argument('--model', default='OneBP', help='OneBP')
     parser.add_argument('--epochs', type=int, default=1800)  # 150 200 300 800 1600 2400
     parser.add_argument('--batch_size', type=int, default=1024)  # 128 1024
-    parser.add_argument('--l2', type=float, default=1e-5, help='l2 penalty')  # 1e-4 1e-5 0
-    parser.add_argument('--lr', type=float, default=5e-4, help='learning rate')  # 0.1 5e-4 1e-3
+    parser.add_argument('--l2', type=float, default=1e-5, help='l2 penalty')  # 1e-4 1e-5 1e-6 0
+    parser.add_argument('--lr', type=float, default=5e-4, help='learning rate')  # 5e-4 5e-5 1e-3
     parser.add_argument('--lr_dc', type=float, default=1, help='learning rate decay rate') # 0.1 1
     parser.add_argument('--lr_dc_epoch', type=list, default=[20, 60, 80], help='the epoch which the learning rate decay')  # 20 60 80
-    parser.add_argument('--LOSS', default='Info_NCE', help='loss')  # Info_NCE, Info_NCE, DCL, HCL, DPL, MINUS
+    parser.add_argument('--LOSS', default='Info_NCE', help='loss')  
     parser.add_argument('--num_workers', type=int, default=0)  # Speed up training
     parser.add_argument('--dim', type=int, default=32, help='dimension of vector')  # Dim of encoders
-    parser.add_argument('--hop', type=int, default=3, help='number of LightGCN layers')  # Hop of GCN
-    parser.add_argument('--temperature', type=float, default=1, help='temperature')  # 0.5 1
-    parser.add_argument('--tau_plus', type=float, default=0.07, help='tau_plus')  # 0.5 1
-    parser.add_argument('--beta', type=float, default=0.99, help='tau_plus')  # 0.5 1
+    parser.add_argument('--beta', type=float, default=0.99, help='beta')  # 0.99 0.999
 
     # Dataset
     parser.add_argument('--dataset', default='100k', help='dataset')  # 100k 1M gowalla yelp2018
