@@ -24,6 +24,7 @@ def parse_args():
     parser.add_argument('--num_workers', type=int, default=0)  # Speed up training
     parser.add_argument('--dim', type=int, default=32, help='dimension of vector')  # Dim of encoders
     parser.add_argument('--beta', type=float, default=0.99, help='beta')  # 0.99 0.999
+    parser.add_argument('--temperature', type=float, default=1, help='temperature of Info_NCE')  # 0.5 1
 
     # Dataset
     parser.add_argument('--dataset', default='100k', help='dataset')  # 100k 1M gowalla yelp2018

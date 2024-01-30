@@ -63,7 +63,7 @@ def log():
         #path = arg.log_root + arg.dataset
         if not os.path.exists(path):
             os.makedirs(path)
-        file = path + '/' + arg.dataset + '_' + arg.LOSS + '_'+ arg.model + '_' + str(arg.M) + '_' + str(arg.N) + '_' + str(arg.tau_plus) + '--' + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + '.txt'
+        file = path + '/' + arg.dataset + '_' + arg.LOSS + '_'+ arg.model + '_' + str(arg.M) + '_' + str(arg.N) + '_' +  '--' + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + '.txt'
         f = open(file, 'w')
         print('----------------loging----------------')
     else:
