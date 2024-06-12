@@ -48,3 +48,14 @@ For instance, execute the following command to train CF model using AUC_NS metho
 python main.py --model OneBP --dataset 100k --l2 1e-5 --lr 5e-4 --dim 32  --batch_size 1024 --beta 0.99 --N 5 --epochs 2000
 python main.py --model OneBP --dataset 1M   --l2 1e-6 --lr 1e-3 --dim 128 --batch_size 1024 --beta 0.99 --N 5 --epochs 200
 ```
+
+
+## Detailed infomations on Exploration Study with fixed category "genres"
+Number of items in different categories:
+![image-20240612110744041](C:\Users\69451\AppData\Roaming\Typora\typora-user-images\image-20240612110744041.png)
+
+Since the label of each item in the 100k dataset is not unique, we judge how good the user embedded learning is by calculating the classification performance for each category, and the results of the experiment are shown below.
+
+![class](E:\GitCode\OneBP\class.png)
+
+Experiments demonstrate that OneBP achieves improved classification performance on most classes, and that the model takes more account of recommendations from other user interests (i.e., diversity)
