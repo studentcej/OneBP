@@ -52,7 +52,7 @@ python main.py --model OneBP --dataset 1M   --l2 1e-6 --lr 1e-3 --dim 128 --batc
 
 ## Detailed infomations on Exploration Study with fixed category "genres"
 Number of items in different categories:
-![image-20240612110744041](C:\Users\69451\AppData\Roaming\Typora\typora-user-images\image-20240612110744041.png)
+![statistic](E:\GitCode\OneBP\statistic.png)
 
 Since the label of each item in the 100k dataset is not unique, we judge how good the user embedded learning is by calculating the classification performance for each category, and the results of the experiment are shown below.
 
