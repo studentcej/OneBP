@@ -52,10 +52,10 @@ python main.py --model OneBP --dataset 1M   --l2 1e-6 --lr 1e-3 --dim 128 --batc
 
 ## Detailed infomations on Exploration Study with fixed category "genres"
 Number of items in different categories:
-![statistic](E:\GitCode\OneBP\statistic.png)
+![statistic](.\statistic.png)
 
 Since the label of each item in the 100k dataset is not unique, we judge how good the user embedded learning is by calculating the classification performance for each category, and the results of the experiment are shown below.
 
-![class](E:\GitCode\OneBP\class.png)
+![class](.\class.png)
 
 Experiments demonstrate that OneBP achieves improved classification performance on most classes, and that the model takes more account of recommendations from other user interests (i.e., diversity)
