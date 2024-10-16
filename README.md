@@ -43,7 +43,7 @@ Suggested AUC_NS parameters are:
 | Gowalla-MF        |  0.999  |
 | Yelp2018-MF       |  0.999  |
 
-For instance, execute the following command to train CF model using AUC_NS method.
+For instance, execute the following command to train CF model using OneBP method.
 ```
 python main.py --model OneBP --dataset 100k --l2 1e-5 --lr 5e-4 --dim 32  --batch_size 1024 --beta 0.99 --N 5 --epochs 2000
 python main.py --model OneBP --dataset 1M   --l2 1e-6 --lr 1e-3 --dim 128 --batch_size 1024 --beta 0.99 --N 5 --epochs 200
